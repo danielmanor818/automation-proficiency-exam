@@ -40,7 +40,7 @@ class SelenuimInfra{
                     element = await this.driver.findElement(By[locatorType](locatorValue))
                 }
             }
-            this.driver.sleep(2000)
+            this.driver.sleep(5000)
             await element.click()
             this.driver.sleep(2000)
             
@@ -81,7 +81,7 @@ class SelenuimInfra{
                 }
             }
             console.log(`Get text from element with ${locatorType} = ${locatorValue} `)
-            return await element.getText()
+            return element.getText()
         }
         catch (error) {
             console.error(`Got error while trying to get text from element with ${locatorType} = ${locatorValue}`)
